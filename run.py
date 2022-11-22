@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 def main():
     dt = 0.02
 
-    lorenz63 = Lorenz63(dt=dt)
+    lorenz63 = Lorenz63(dt=dt, T=125)
     network = Network(lorenz63=lorenz63)
 
     train_trajectory = network.train_trajectory
@@ -56,7 +56,6 @@ def main():
     plt.show()
 
     t_test = np.arange(0, num_test_steps) * dt
-    print(t_test)
 
     figxyz = plt.figure()
     ax1 = figxyz.add_subplot(3, 1, 1)

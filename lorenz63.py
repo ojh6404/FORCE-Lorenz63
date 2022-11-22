@@ -26,7 +26,7 @@ class Lorenz63():
 
 
 def main():
-    lorenz63 = Lorenz63(dt=0.02)
+    lorenz63 = Lorenz63(dt=0.02, T=50)
     trajectory = lorenz63.trajectory
     plot_3d(trajectory)
 

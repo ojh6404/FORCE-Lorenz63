@@ -6,7 +6,11 @@ def plot_3d(traj):
     traj = traj.squeeze()
     fig = plt.figure()
     ax = fig.add_subplot(projection='3d')
-    ax.plot(traj[:, 0], traj[:, 1], traj[:, 2])
+    ax.plot(traj[:, 0], traj[:, 1], traj[:, 2], linewidth=1, label='Lorenz63')
+    ax.set_xlabel('$x$')
+    ax.set_ylabel('$y$')
+    ax.set_zlabel('$z$')
+    ax.legend()
     plt.draw()
     plt.show()
 

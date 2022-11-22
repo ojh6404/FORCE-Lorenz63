@@ -33,8 +33,8 @@ class Network():
         np.random.seed(self.seed)
 
         self.Wr_std = 1. / np.sqrt(self.pr * self.Nr)
-        self.Wo_std = 1. / np.sqrt(self.Nr)
-        self.Wi_std = 1. / np.sqrt(self.Nz)
+        # self.Wo_std = 1. / np.sqrt(self.Nr)
+        # self.Wi_std = 1. / np.sqrt(self.Nz)
 
         self.Wr = self.Wr_std * sparse.random(self.Nr, self.Nr, density=pr,
                                               random_state=self.seed, data_rvs=np.random.randn).toarray()
